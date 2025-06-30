@@ -1,0 +1,222 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: #20232a; /* Warna latar belakang utama dari gambar */
+  color: #f0f0f0; /* Warna teks utama */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  padding: 25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav li {
+  margin: 0 20px; /* Jarak antar item menu */
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500; /* Sedikit lebih tebal dari regular */
+  font-size: 0.95em;
+  padding-bottom: 5px; /* Ruang untuk garis bawah */
+}
+
+nav a.active,
+nav a:hover {
+  color: #f7b80f; /* Warna kuning/oranye dari gambar */
+  border-bottom: 2px solid #f7b80f;
+}
+
+main {
+  max-width: 1100px; /* Batas lebar konten */
+  margin: 0 auto; /* Pusatkan konten */
+  padding: 0 20px; /* Padding kiri kanan untuk layar kecil */
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+  gap: 40px; /* Jarak antara kolom teks dan gambar */
+}
+
+.hero-text {
+  flex: 3; /* Kolom teks mengambil lebih banyak ruang */
+}
+
+.greeting {
+  font-size: 1.8em;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #e0e0e0;
+}
+
+.hero-text h1 {
+  font-size: 3.2em; /* Ukuran nama yang besar */
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 15px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.roles {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  color: #c0c0c0; /* Sedikit lebih redup */
+}
+
+.experience {
+  font-size: 1em;
+  margin-bottom: 30px;
+  color: #d0d0d0;
+}
+
+.experience .highlight {
+  color: #f7b80f; /* Warna kuning/oranye */
+  font-weight: 500;
+}
+
+.cta-button {
+  background-color: #f7b80f;
+  color: #20232a; /* Warna teks kontras dengan background tombol */
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  font-size: 1em;
+}
+
+.cta-button:hover {
+  background-color: #e0a800; /* Warna hover sedikit lebih gelap */
+}
+
+.cta-button .arrow {
+  margin-left: 8px;
+}
+
+.tech-icons {
+  margin-top: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px; /* Jarak antar ikon */
+}
+
+.tech-icons img {
+  width: 32px; /* Ukuran ikon */
+  height: 32px;
+  object-fit: contain; /* Pastikan ikon tidak terdistorsi */
+}
+
+.hero-image-section {
+  flex: 2; /* Kolom gambar */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image {
+  max-width: 100%;
+  width: 280px; /* Sesuaikan ukuran gambar profil */
+  height: auto;
+  border-radius: 8px; /* Sedikit lengkungan di sudut gambar */
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.download-cv {
+  color: #f7b80f;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95em;
+}
+
+.download-cv:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero-text h1 {
+    font-size: 2.8em;
+  }
+  .greeting {
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 768px) {
+  header nav ul {
+    justify-content: center;
+    flex-wrap: wrap; /* Jika menu terlalu panjang di mobile */
+  }
+  nav li {
+    margin: 5px 10px;
+  }
+
+  .hero {
+    flex-direction: column; /* Susun kolom secara vertikal */
+    text-align: center; /* Pusatkan teks di mobile */
+  }
+
+  .hero-text {
+    order: 2; /* Teks di bawah gambar pada mobile */
+    margin-bottom: 30px;
+  }
+
+  .hero-image-section {
+    order: 1; /* Gambar di atas teks pada mobile */
+    margin-bottom: 30px;
+  }
+
+  .profile-image {
+    width: 220px; /* Ukuran gambar lebih kecil di mobile */
+  }
+
+  .tech-icons {
+    justify-content: center; /* Pusatkan ikon di mobile */
+  }
+
+  .hero-text h1 {
+    font-size: 2.4em;
+  }
+  .greeting {
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2em;
+  }
+  nav a {
+    font-size: 0.9em;
+  }
+  .roles,
+  .experience {
+    font-size: 0.95em;
+  }
+  .cta-button {
+    font-size: 0.9em;
+    padding: 10px 20px;
+  }
+}
